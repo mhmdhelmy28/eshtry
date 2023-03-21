@@ -1,0 +1,24 @@
+const express = require("express");
+const app = express();
+const userRouter = require("./src/routes/user");
+const addressRourter = require("./src/routes/address");
+const categoryRouter = require("./src/routes/category");
+const reviewRouter = require("./src/routes/review");
+const productRouter = require("./src/routes/product");
+const orderRouter = require("./src/routes/order");
+const roleRouter = require('./src/routes/role');
+const cartRouter = require("./src/routes/cart");
+const isAuthenticated = require("./src/middlewares/auth_middleware");
+const apiErrorHandler = require('./src/middlewares/error-handler')
+app.use(express.json());
+app.use("", userRouter);
+app.use("/roles", roleRouter);
+app.use("/categories", categoryRouter);
+app.use("/products", productRouter);
+app.use(isAuthenticated);
+app.use("/cart", cartRouter);
+app.use("/order", orderRouter);
+app.use("/address", addressRourter);
+app.use("", reviewRouter);
+app.use(apiErrorHandler);
+module.exports = app;

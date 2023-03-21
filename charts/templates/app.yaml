@@ -1,0 +1,68 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deployment
+  labels:
+    teir: be
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      teir: be
+  template:
+    metadata:
+      labels:
+        teir: be
+    spec:
+      containers:
+        - name: be
+          image: {{ .Values.image.repository }}
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: DBHOST
+              valueFrom:
+                configMapKeyRef:
+                  name: my-config
+                  key: DBHOST
+            - name: DBNAME
+              valueFrom:
+                configMapKeyRef:
+                  name: my-config
+                  key: DBNAME
+            - name: JWT_ACCESS
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: JWT_ACCESS
+            - name: JWT_REFRESH
+              valueFrom:
+                secretKeyRef:
+                  name: my-secret
+                  key: JWT_REFRESH
+          ports:
+            - containerPort: {{ .Values.beService.port }}
+          resources:
+            limits:
+              cpu: "1"
+              memory: "1Gi"
+            requests:
+              cpu: "0.5"
+              memory: "512Mi"
+
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-service   
+  labels:
+    app: app-service
+spec:
+  type: LoadBalancer
+  ports:
+    - port:  3000
+      targetPort:  3000
+      protocol: TCP
+  selector:
+      teir: be

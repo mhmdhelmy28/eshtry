@@ -1,0 +1,40 @@
+version: "3"
+
+services:
+  app:
+    build: 
+      context: .
+    ports:
+      - "3000:3000"
+    environment:
+      DBHOST: db
+      DBNAME: eshtry
+      JWT_ACCESS: SECRET_KEY
+      JWT_REFRESH: SECRET_REFRESH
+      DOCKER_BUILD_PROGRESS: plain
+    networks:
+      - eshtry-network
+    depends_on:
+      db:
+        condition: service_healthy
+  db:
+    image: postgres:alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: eshtry
+    ports:
+      - "5432:5432"
+    volumes:
+      - db-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    networks:
+      - eshtry-network
+  
+
+volumes:
+  db-data:
