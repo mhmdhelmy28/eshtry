@@ -16,4 +16,19 @@ const emptyCart = async(req, res) => {
     );
 }
 
+async function findCartByUserId(userId){
+    const cart = await Cart.findOne({ where: { UserId: userId }, include: { model: CartItem } });
+    return cart;
+}
+
+async function findCartItem(cartItemId, cartId){
+    const cartItem = CartItem.findOne({ where: { id: cartItemId, CartId: cartId } });
+    return cartItem
+}
+const deleteAllCartItems = async (cartId, transaction) => {
+    await CartItem.destroy({ where: { CartId: cartId }, transaction });
+  };
+
+
+
 module.exports = emptyCart;

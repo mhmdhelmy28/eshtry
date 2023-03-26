@@ -4,11 +4,10 @@ class Order extends Model {
     static init(sequelize) {
         super.init(
             {
-              
                 totalPrice: {
                     type: DataTypes.INTEGER,
                     defaultValue: 0,
-                }
+                },
             },
             {
                 sequelize,

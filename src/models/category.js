@@ -13,7 +13,7 @@ class Category extends Model {
             },
             {
                 sequelize,
-                timestamps: false
+                timestamps: false,
             }
         );
     }

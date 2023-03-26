@@ -1,4 +1,3 @@
-
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
 const isAuthenticated = async (req, res, next) => {
@@ -10,15 +9,15 @@ const isAuthenticated = async (req, res, next) => {
   const token = authorization.split(" ")[1];
   try {
     const { userId } = jwt.verify(token, process.env.JWT_ACCESS);
-    const user = await User.findByPk(userId); 
-    
+    const user = await User.findByPk(userId);
+
     if (!user) {
       return res.status(401, "user not authorized");
     }
     res.locals.userId = userId;
     next();
   } catch (error) {
-    logger.error(error.message)
+    logger.error(error.message);
     if (err instanceof jwt.TokenExpiredError) {
       return res.status(401, "access token expires");
     } else if (err instanceof jwt.JsonWebTokenError) {

@@ -1,5 +1,5 @@
 const fs = require("fs").promises;
-const config = require('../config/config');
+const config = require("../config/config");
 const { Sequelize } = require("sequelize");
 
 const sequelize = new Sequelize(config[process.env.NODE_ENV || "development"]);

@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "test": "node ./node_modules/mocha/bin/mocha --exit test/",
+    "migrate": "npx sequelize-cli db:migrate",
+    "seed": "npm run db:seed:all"
   },
   "dependencies": {
     "bcrypt": "^5.1.0",

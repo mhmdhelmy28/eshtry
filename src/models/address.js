@@ -4,7 +4,6 @@ class Address extends Model {
     static init(sequelize) {
         super.init(
             {
-
                 city: {
                     type: DataTypes.STRING,
                 },

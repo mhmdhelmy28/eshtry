@@ -20,14 +20,17 @@ class User extends Model {
                     validate: {
                         len: [8, 100],
                         isComplex(value) {
-                            if (!/[a-z]/.test(value) ||
+                            if (
+                                !/[a-z]/.test(value) ||
                                 !/[A-Z]/.test(value) ||
                                 !/[0-9]/.test(value) ||
                                 !/[^a-zA-Z0-9]/.test(value)
                             ) {
-                                throw new Error("Password must have at least one lowercase letter, one uppercase letter, one number, and one special character.");
+                                throw new Error(
+                                    "Password must have at least one lowercase letter, one uppercase letter, one number, and one special character."
+                                );
                             }
-                        }
+                        },
                     },
                 },
             },
@@ -46,15 +49,15 @@ class User extends Model {
     }
 
     static setAssociations() {
-       const Order = this.sequelize.models.Order;
-       const Address = this.sequelize.models.Address;
+        const Order = this.sequelize.models.Order;
+        const Address = this.sequelize.models.Address;
         const Review = this.sequelize.models.Review;
         const Role = this.sequelize.models.Role;
 
-        User.belongsTo(Role); 
-        this.hasMany(Order, {  onDelete: "CASCADE" });
-        this.hasMany(Address, {  onDelete: "CASCADE" });
-       this.hasMany(Review, {  onDelete: "CASCADE" });
+        User.belongsTo(Role);
+        this.hasMany(Order, { onDelete: "CASCADE" });
+        this.hasMany(Address, { onDelete: "CASCADE" });
+        this.hasMany(Review, { onDelete: "CASCADE" });
     }
 }
 User.prototype.isCorrectPassword = function (password) {

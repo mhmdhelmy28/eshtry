@@ -1,0 +1,46 @@
+name: test
+
+on: [ push ]
+
+env:
+  NODE_ENV: test
+  JWT_ACCESS: SECRET_KEY
+  JWT_REFRESH: SECRET_REFRESH
+  DB_TEST_NAME: eshtrytest
+  DB_TEST_HOST: 127.0.0.1
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres
+        env:
+          POSTGRES_USER: postgres
+          POSTGRES_PASSWORD: password
+        options: >-
+          --name postgres
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+    - name: checkout
+      uses: actions/checkout@v3
+
+    - name: install dependencies
+      run: yarn install
+
+    - name: create database
+      run: docker exec -it postgres psql -U postgres -c "CREATE DATABASE eshtrytest"
+
+    - name: do migrations
+      run: |
+        yarn migrate
+        yarn seed
+
+    - name: run tests
+      run: yarn test

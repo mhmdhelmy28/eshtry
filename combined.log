@@ -1,0 +1,533 @@
+2023-03-22T19:29:09.277Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:29:09.377Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"Jooe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:30:59.330Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"Joe","lastName":"Doe","username":"Jooe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:32:04.381Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"Joe","lastName":"Doe","username":"Jooe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:33:23.078Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:33:23.175Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"Jooe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:34:39.024Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"Jooe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:34:39.123Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"Jooe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:37:05.605Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:37:05.708Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"Jooe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:37:48.708Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T19:37:48.720Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T19:37:48.739Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:37:48.764Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:37:48.770Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:37:48.777Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:37:48.871Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:38:05.110Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T19:38:05.122Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T19:38:05.139Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:38:05.162Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:38:05.168Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:38:05.175Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:38:05.268Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:39:00.612Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T19:39:00.624Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T19:39:00.649Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:39:00.666Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:39:00.671Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:39:00.676Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:39:00.772Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:173:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:40:31.689Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T19:40:31.699Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T19:40:31.723Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:40:31.748Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:40:31.752Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:40:31.756Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:40:46.976Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T19:40:46.988Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T19:40:47.015Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:40:47.030Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:40:47.034Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:40:47.041Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:40:47.136Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:41:00.975Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:41:01.074Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"testuser2","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:169:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:42:06.269Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:170:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:42:06.375Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"testuser2","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:170:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:45:05.114Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:170:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:45:05.215Z error: secretOrPrivateKey must have a value - POST /signIn {"body":{"username":"testuser2","password":"PassworD@123"},"params":{},"query":{}} Error: secretOrPrivateKey must have a value
+    at module.exports [as sign] (/projects/eshtry/node_modules/jsonwebtoken/sign.js:105:20)
+    at User.generateAccessToken (/projects/eshtry/src/models/user.js:64:16)
+    at signIn (/projects/eshtry/src/controllers/user.js:170:38)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T19:46:51.513Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T19:46:51.526Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T19:46:51.550Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:46:51.567Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:46:51.571Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:46:51.577Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:47:08.543Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:47:21.221Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:47:21.345Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T19:47:21.354Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T19:47:32.149Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:47:32.285Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T19:47:32.295Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T19:47:34.113Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T19:47:34.169Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T19:47:35.541Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T19:47:35.553Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T19:47:37.196Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":6,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T19:47:37.203Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":4},"params":{},"query":{}} 
+2023-03-22T19:47:37.214Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":4,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T19:47:37.222Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T19:47:37.233Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T19:47:38.548Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T19:47:38.562Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T19:47:38.576Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T19:47:41.191Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T19:47:41.196Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T19:47:41.202Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:47:41.227Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T19:47:41.230Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T19:47:41.235Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:09:04.627Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T20:09:04.640Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T20:09:04.662Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:09:04.685Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:09:04.691Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:09:04.699Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:11:12.216Z error: Cannot convert undefined or null to object - GET /products/ {"body":{"first_name":"string","last_name":"string","email":"u@3.com","user_type":"User","gender":"Male","password":"string"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at Product.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at getProducts (/projects/eshtry/src/controllers/product.js:73:40)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at next (/projects/eshtry/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/projects/eshtry/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+2023-03-22T20:12:46.466Z error: Cannot convert undefined or null to object - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at User.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at User.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:23)
+    at signUp (/projects/eshtry/src/controllers/user.js:25:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T20:12:46.488Z error: Cannot convert undefined or null to object - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"trader","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at User.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at User.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:23)
+    at signUp (/projects/eshtry/src/controllers/user.js:25:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T20:12:46.492Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T20:12:46.499Z error: Cannot convert undefined or null to object - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at User.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at User.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:23)
+    at signUp (/projects/eshtry/src/controllers/user.js:25:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T20:12:46.504Z error: Cannot convert undefined or null to object - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at User.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at User.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:23)
+    at signUp (/projects/eshtry/src/controllers/user.js:25:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T20:12:46.511Z error: Cannot convert undefined or null to object - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at User.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at User.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:23)
+    at signUp (/projects/eshtry/src/controllers/user.js:25:29)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-03-22T20:12:46.517Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:12:46.522Z error: Cannot convert undefined or null to object - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at User.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at User.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:23)
+    at signIn (/projects/eshtry/src/controllers/user.js:166:29)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at next (/projects/eshtry/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/projects/eshtry/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/projects/eshtry/node_modules/express/lib/router/index.js:175:3)
+    at router (/projects/eshtry/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/projects/eshtry/node_modules/express/lib/router/index.js:328:13)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at /projects/eshtry/node_modules/body-parser/lib/read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:204:9)
+    at invokeCallback (/projects/eshtry/node_modules/raw-body/index.js:231:16)
+    at done (/projects/eshtry/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/projects/eshtry/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2023-03-22T20:12:46.529Z error: Cannot convert undefined or null to object - POST /signIn {"body":{"username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} TypeError: Cannot convert undefined or null to object
+    at Function.keys (<anonymous>)
+    at User.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1099:47)
+    at User.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:23)
+    at signIn (/projects/eshtry/src/controllers/user.js:166:29)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at next (/projects/eshtry/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/projects/eshtry/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/projects/eshtry/node_modules/express/lib/router/index.js:175:3)
+    at router (/projects/eshtry/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/projects/eshtry/node_modules/express/lib/router/index.js:328:13)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at /projects/eshtry/node_modules/body-parser/lib/read.js:137:5
+    at AsyncResource.runInAsyncScope (node:async_hooks:204:9)
+    at invokeCallback (/projects/eshtry/node_modules/raw-body/index.js:231:16)
+    at done (/projects/eshtry/node_modules/raw-body/index.js:220:7)
+    at IncomingMessage.onEnd (/projects/eshtry/node_modules/raw-body/index.js:280:7)
+    at IncomingMessage.emit (node:events:513:28)
+    at endReadableNT (node:internal/streams/readable:1359:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:82:21)
+2023-03-22T20:44:24.671Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:44:24.811Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T20:44:24.818Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T20:44:26.483Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T20:44:26.531Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:44:28.191Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T20:44:28.202Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T20:44:29.709Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:44:29.716Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-03-22T20:44:29.728Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:44:29.736Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T20:44:29.753Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:44:31.129Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T20:44:31.142Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T20:44:31.155Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:45:26.311Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:45:26.438Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T20:45:26.446Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T20:45:27.994Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T20:45:28.036Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:45:29.424Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T20:45:29.436Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T20:45:30.979Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:45:30.987Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-03-22T20:45:30.999Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:45:31.007Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T20:45:31.023Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:45:32.468Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T20:45:32.481Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T20:45:32.496Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:45:35.131Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T20:45:35.135Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T20:45:35.139Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:45:35.160Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:45:35.163Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:45:35.168Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:46:45.276Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:46:45.407Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T20:46:45.415Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T20:46:46.912Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T20:46:46.966Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:46:48.441Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T20:46:48.452Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T20:46:49.933Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":9,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:46:49.940Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":6},"params":{},"query":{}} 
+2023-03-22T20:46:49.965Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T20:46:49.982Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:46:51.363Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T20:46:51.376Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T20:46:51.391Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:46:53.928Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T20:46:53.932Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T20:46:53.936Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:46:53.955Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:46:53.959Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:46:53.963Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:08.891Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:09.023Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T20:47:09.029Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T20:47:11.040Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T20:47:11.084Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:12.493Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:12.515Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T20:47:13.980Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:47:13.988Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-03-22T20:47:14.000Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:47:14.008Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T20:47:14.029Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:15.370Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T20:47:15.384Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T20:47:15.398Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:18.773Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T20:47:18.778Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T20:47:18.784Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:47:18.804Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:47:18.807Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:18.811Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:32.190Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:32.327Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T20:47:32.333Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T20:47:33.842Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T20:47:33.884Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:35.326Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:35.338Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T20:47:36.842Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":9,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T20:47:36.849Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":6},"params":{},"query":{}} 
+2023-03-22T20:47:36.874Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T20:47:36.891Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:38.309Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T20:47:38.322Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T20:47:38.336Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T20:47:40.961Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T20:47:40.965Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T20:47:40.969Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:47:40.991Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T20:47:40.995Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:41.000Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:46.430Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T20:47:46.561Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T20:47:46.570Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:10:20.168Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:10:20.279Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:10:20.285Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:10:21.508Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T21:10:21.533Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:10:22.716Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T21:10:22.725Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T21:10:23.938Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:10:23.944Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-03-22T21:10:23.951Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:10:23.955Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T21:10:23.967Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:10:25.103Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T21:10:25.116Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T21:10:25.127Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:10:27.824Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T21:10:27.828Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T21:10:27.831Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:10:27.842Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:10:27.845Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:10:27.848Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:11:36.850Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:11:36.937Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:11:36.942Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:11:38.147Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T21:11:38.182Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:11:39.429Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T21:11:39.437Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T21:11:40.648Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":9,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:11:40.654Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":6},"params":{},"query":{}} 
+2023-03-22T21:11:40.674Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T21:11:40.688Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:11:41.853Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T21:11:41.863Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T21:11:41.875Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:11:44.094Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T21:11:44.100Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T21:11:44.104Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:11:44.121Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:11:44.124Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:11:44.129Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:11:55.635Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:11:55.728Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:11:55.736Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:11:56.983Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T21:11:57.020Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:11:58.512Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T21:11:58.523Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T21:11:59.749Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:11:59.754Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-03-22T21:11:59.763Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:11:59.770Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T21:11:59.783Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:12:00.937Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T21:12:00.947Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T21:12:00.956Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:12:03.787Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T21:12:03.790Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T21:12:03.793Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:12:03.810Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:12:03.813Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:12:03.816Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:13:41.825Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:13:41.939Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:13:41.946Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:14:45.448Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:14:45.553Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:14:45.560Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:14:46.839Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T21:14:46.877Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:14:48.081Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T21:14:48.088Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T21:14:49.346Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":9,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:14:49.351Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":7},"params":{},"query":{}} 
+2023-03-22T21:14:49.372Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T21:14:49.386Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:14:50.580Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T21:14:50.590Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T21:14:50.602Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:14:52.923Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T21:14:52.927Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T21:14:52.932Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:14:52.947Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:14:52.949Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:14:52.952Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:04.034Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:04.127Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:15:04.133Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:15:05.404Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T21:15:05.445Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:06.681Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:06.691Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T21:15:07.918Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":15,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:15:07.923Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":10},"params":{},"query":{}} 
+2023-03-22T21:15:07.933Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":10,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:15:07.939Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T21:15:07.952Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:09.130Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T21:15:09.141Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T21:15:09.153Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:11.456Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T21:15:11.461Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T21:15:11.467Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:15:11.485Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:15:11.487Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:11.491Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:14.958Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:15.068Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:15:15.075Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:15:16.313Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T21:15:16.349Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:17.570Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:17.580Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T21:15:18.888Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":21,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:15:18.894Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":13},"params":{},"query":{}} 
+2023-03-22T21:15:18.904Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":13,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:15:18.910Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T21:15:18.925Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:20.095Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T21:15:20.124Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:22.497Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T21:15:22.502Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T21:15:22.507Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:15:22.522Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:15:22.524Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:22.526Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:26.776Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:26.847Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-22T21:15:26.851Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-22T21:15:27.905Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-22T21:15:27.932Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:29.032Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:29.038Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-22T21:15:30.064Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":28,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:15:30.067Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":16},"params":{},"query":{}} 
+2023-03-22T21:15:30.074Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":16,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-22T21:15:30.078Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-22T21:15:30.087Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:31.025Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-22T21:15:31.032Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-22T21:15:31.040Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-22T21:15:33.083Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-22T21:15:33.088Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-22T21:15:33.095Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:15:33.115Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-22T21:15:33.118Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-22T21:15:33.122Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-26T22:15:32.119Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-26T22:15:32.254Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-26T22:15:32.262Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-26T22:15:33.969Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-26T22:15:34.017Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-26T22:15:35.647Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-26T22:15:35.659Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-26T22:15:37.389Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-03-26T22:15:37.396Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-03-26T22:15:37.405Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-26T22:15:37.415Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-26T22:15:37.431Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-26T22:15:39.002Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-26T22:15:39.015Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-26T22:15:39.030Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-26T22:15:42.127Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-26T22:15:42.132Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-26T22:15:42.138Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-26T22:15:42.160Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-26T22:15:42.163Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-26T22:15:42.166Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-26T22:25:24.575Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-26T22:25:24.714Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-03-26T22:25:24.724Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-03-26T22:25:26.074Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-03-26T22:25:26.102Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-03-26T22:25:27.640Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-03-26T22:25:27.652Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-03-26T22:25:29.337Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-03-26T22:25:29.344Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-03-26T22:25:29.355Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-03-26T22:25:29.361Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-03-26T22:25:29.379Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-03-26T22:25:30.927Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-03-26T22:25:30.940Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-03-26T22:25:30.954Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-03-26T22:25:33.984Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-03-26T22:25:33.990Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-03-26T22:25:33.995Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-03-26T22:25:34.017Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-03-26T22:25:34.019Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-03-26T22:25:34.023Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 

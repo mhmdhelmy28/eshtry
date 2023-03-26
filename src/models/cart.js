@@ -2,9 +2,7 @@ const { Model, DataTypes } = require("sequelize");
 class Cart extends Model {
     static init(sequelize) {
         super.init(
-            {
-          
-            },
+            {},
             {
                 sequelize,
                 createdAt: true,

@@ -1,24 +1,22 @@
-const Role = require('../models/role');
-const logger = require('../utils/logger');
+const Role = require("../models/role");
+const logger = require("../utils/logger");
 
 const createRole = async (req, res) => {
   try {
     const { name } = req.body;
 
     const role = await Role.create({
-      name
+      name,
     });
 
     res.status(201).send({
       data: {
-        role
-      }
+        role,
+      },
     });
   } catch (error) {
-    
     next(error);
   }
 };
 
-
-module.exports = createRole
+module.exports = createRole;

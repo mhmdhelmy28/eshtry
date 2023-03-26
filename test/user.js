@@ -2,24 +2,22 @@ const chai = require("chai");
 const chaiHttp = require("chai-http");
 const app = require("../app.js");
 const User = require("../src/models/user");
-const { execSync } = require('child_process');
+const { execSync } = require("child_process");
 const { sequelize, initDatabase } = require("../src/models/index");
 
 chai.use(chaiHttp);
 const expect = chai.expect;
 
-
 describe("User Registration and Login", () => {
   before(async () => {
     await initDatabase();
     try {
-      execSync('npx sequelize-cli db:seed:all', { stdio: 'inherit' });
-    }catch(err){
+      execSync("npx sequelize-cli db:seed:all", { stdio: "inherit" });
+    } catch (err) {
       console.log(err);
       process.exit(0);
     }
   });
-
 
   it("should register a new user", function (done) {
     chai
@@ -47,7 +45,7 @@ describe("User Registration and Login", () => {
         username: "jahndoe",
         password: "PassworD@123",
         role: "trader",
-        storeName: "Neeeeeeeeeey"
+        storeName: "Neeeeeeeeeey",
       })
       .end((err, res) => {
         expect(res).to.have.status(201);
@@ -64,7 +62,7 @@ describe("User Registration and Login", () => {
         username: "jahndoe",
         password: "PassworD@123",
         role: "admin",
-        storeName: "Neeeeeeeeeey"
+        storeName: "Neeeeeeeeeey",
       })
       .end((err, res) => {
         expect(res).to.have.status(400);
@@ -102,9 +100,9 @@ describe("User Registration and Login", () => {
         expect(res).to.have.status(400);
         done();
       });
-    });
+  });
 
-      it("should fail to register a new user due to password constraint", function (done) {
+  it("should fail to register a new user due to password constraint", function (done) {
     chai
       .request(app)
       .post("/signUp")
@@ -163,17 +161,11 @@ describe("User Registration and Login", () => {
       });
   });
 
-
-  after( async () => {
+  after(async () => {
     try {
-      await User.destroy({ where: {} });
-      //  const pendingQueries = await sequelize.query("SELECT pg_terminate_backend(pid) FROM pg_stat_activity WHERE datname = 'eshtrytest' AND state = 'active'");
-      //  await Promise.all(pendingQueries.map(query => query.then(() => undefined)));
-      await sequelize.close();
+       await User.destroy({ where: {} });
     } catch (error) {
       console.log(error);
     }
   });
- 
-
 });

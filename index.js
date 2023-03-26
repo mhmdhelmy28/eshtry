@@ -8,15 +8,15 @@
 const { initDatabase } = require("./src/models/index");
 const app = require("./app");
 
-(async () => {
-  try {
-    await initDatabase();
-  } catch (error) {
-    console.log(error);
-    process.exit(1);
-  }
-})();
+// (async () => {
+//   try {
+//     await initDatabase();
+//   } catch (error) {
+//     console.log(error);
+//     process.exit(1);
+//   }
+// })();
 // const server = https.createServer(options, app);
-server.listen(process.env.PORT, () => {
+app.listen(process.env.PORT, () => {
   console.log(`listening on port ${process.env.PORT}`);
 });

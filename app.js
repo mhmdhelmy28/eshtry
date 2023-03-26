@@ -6,10 +6,10 @@ const categoryRouter = require("./src/routes/category");
 const reviewRouter = require("./src/routes/review");
 const productRouter = require("./src/routes/product");
 const orderRouter = require("./src/routes/order");
-const roleRouter = require('./src/routes/role');
+const roleRouter = require("./src/routes/role");
 const cartRouter = require("./src/routes/cart");
 const isAuthenticated = require("./src/middlewares/auth_middleware");
-const apiErrorHandler = require('./src/middlewares/error-handler')
+const apiErrorHandler = require("./src/middlewares/error-handler");
 app.use(express.json());
 app.use("", userRouter);
 app.use("/roles", roleRouter);

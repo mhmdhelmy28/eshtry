@@ -1,17 +1,20 @@
 const Review = require("../models/review");
-const ApiError = require('../utils/ApiError')
-const logger = require('../utils/logger');
+const ApiError = require("../utils/ApiError");
+const logger = require("../utils/logger");
 
 const createReview = async (req, res) => {
-    const {userId} = res.locals;
-    const {productId} = req.params;
+    const { userId } = res.locals;
+    const { productId } = req.params;
     const { content } = req.body;
 
     try {
-        const result = await Review.create({ UserId: userId, ProductId: productId, content: content });
+        const result = await Review.create({
+            UserId: userId,
+            ProductId: productId,
+            content: content,
+        });
         res.status(201).send(result);
     } catch (error) {
-        
         next(error);
     }
 };
@@ -22,17 +25,16 @@ const deleteReview = async (req, res) => {
 
         const result = await Review.destroy({
             where: {
-              id: reviewId
-            }
+                id: reviewId,
+            },
         });
 
         if (result) {
             res.status(200).send({ message: "Review deleted successfully", id: reviewId });
         } else {
-            next(ApiError.notFound("Review not found" ));
+            next(ApiError.notFound("Review not found"));
         }
     } catch (error) {
-        
         next(error);
     }
 };

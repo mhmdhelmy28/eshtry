@@ -4,7 +4,6 @@ class CartItem extends Model {
     static init(sequelize) {
         super.init(
             {
-               
                 quantity: {
                     type: DataTypes.INTEGER,
                 },
