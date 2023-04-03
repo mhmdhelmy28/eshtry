@@ -1,9 +1,8 @@
 const Role = require("../models/role");
-const logger = require("../utils/logger");
 
-const createRole = async (req, res) => {
+const createRole = async (req, res, next) => {
   try {
-    const { name } = req.body;
+    const { name } = req.body
 
     const role = await Role.create({
       name,

@@ -1,4 +1,4 @@
-const { Model, DataTypes } = require("sequelize");
+const { Model } = require("sequelize");
 class Cart extends Model {
     static init(sequelize) {
         super.init(

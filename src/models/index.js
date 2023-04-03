@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 const fs = require("fs").promises;
 const config = require("../config/config");
 const { Sequelize } = require("sequelize");

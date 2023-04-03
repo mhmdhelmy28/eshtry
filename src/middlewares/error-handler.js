@@ -1,5 +1,6 @@
 const ApiError = require("../utils/ApiError");
 const logger = require("../utils/logger");
+
 function apiErrorHandler(err, req, res, next) {
   logger.error(err.message, {
     method: req.method,
@@ -15,6 +16,7 @@ function apiErrorHandler(err, req, res, next) {
   }
 
   res.status(500).json("something went wrong");
+  next()
 }
 
 module.exports = apiErrorHandler;

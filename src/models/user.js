@@ -1,3 +1,5 @@
+/* eslint-env node */
+
 const { Model, DataTypes } = require("sequelize");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
@@ -36,7 +38,7 @@ class User extends Model {
             },
             {
                 hooks: {
-                    async beforeCreate(user, options) {
+                    async beforeCreate(user) {
                         const hashedPassword = await bcrypt.hash(user.password, 10);
                         user.password = hashedPassword;
                     },

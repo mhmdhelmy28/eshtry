@@ -1,3 +1,5 @@
+  /* eslint-env node */
+
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const app = require("../app");
@@ -10,7 +12,7 @@ const Cart = require("../src/models/cart.js");
 const Address = require("../src/models/address.js");
 const OrderItem = require("../src/models/order-item.js");
 const CartItem = require("../src/models/cart-item.js");
-const { sequelize, initDatabase } = require("../src/models/index.js");
+const {  initDatabase } = require("../src/models/index.js");
 const Product = require("../src/models/product");
 chai.use(chaiHttp);
 const expect = chai.expect;
@@ -173,6 +175,9 @@ describe("Cart API", () => {
   describe("POST /cart/order", () => {
     let item1;
     let item2;
+    let cartId;
+    // let cartItemId1;
+    // let cartItemId2;
     before(async () => {
       const cart = await Cart.findOne({ where: { UserId: user.id } });
       cartId = cart.id;
@@ -190,9 +195,8 @@ describe("Cart API", () => {
         quantity: 1,
         price: product2.price,
       });
-
-      cartItemId1 = item1.id;
-      cartItemId2 = item2.id;
+      // cartItemId1 = item1.id;
+      // cartItemId2 = item2.id;
     });
     it("should place an order and delete cart items", async () => {
       const res = await chai

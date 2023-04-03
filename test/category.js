@@ -4,7 +4,7 @@ const app = require("../app");
 const Category = require("../src/models/category.js");
 const User = require("../src/models/user.js");
 const { execSync } = require("child_process");
-const { sequelize, initDatabase } = require("../src/models/index.js");
+const {  initDatabase } = require("../src/models/index.js");
 chai.use(chaiHttp);
 const expect = chai.expect;
 

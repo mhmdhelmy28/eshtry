@@ -531,3 +531,733 @@
 2023-03-26T22:25:34.017Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
 2023-03-26T22:25:34.019Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
 2023-03-26T22:25:34.023Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T00:07:48.629Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T00:07:48.773Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T00:07:48.783Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T00:07:50.571Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T00:07:50.625Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T00:07:52.304Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T00:07:52.318Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T00:07:54.082Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T00:07:54.093Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-04-01T00:07:54.114Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T00:07:54.123Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T00:07:54.144Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T00:07:55.870Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T00:07:55.883Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T00:07:55.896Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T00:07:58.720Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T00:07:58.725Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T00:07:58.730Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T00:07:58.752Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T00:07:58.755Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T00:07:58.761Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T00:12:36.400Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T00:12:36.536Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T00:12:36.543Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T00:13:02.207Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T00:13:02.324Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T00:13:02.334Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T00:52:10.200Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T00:52:10.236Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/555 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:52:10.242Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/6 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:52:42.226Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T00:52:42.262Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/555 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:52:42.271Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/11 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:53:15.360Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T00:53:15.403Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/555 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:53:15.413Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/16 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:53:40.556Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T00:53:40.596Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/555 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:53:40.604Z error: WHERE parameter "CartId" has invalid "undefined" value - DELETE /cart/1 {"body":{},"params":{},"query":{}} Error: WHERE parameter "CartId" has invalid "undefined" value
+    at PostgresQueryGenerator.whereItemQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1693:13)
+    at /projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1684:25
+    at Array.forEach (<anonymous>)
+    at PostgresQueryGenerator.whereItemsQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:1682:35)
+    at PostgresQueryGenerator.getWhereConditions (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:2025:19)
+    at PostgresQueryGenerator.selectQuery (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-generator.js:954:28)
+    at PostgresQueryInterface.select (/projects/eshtry/node_modules/sequelize/lib/dialects/abstract/query-interface.js:407:59)
+    at CartItem.findAll (/projects/eshtry/node_modules/sequelize/lib/model.js:1134:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async CartItem.findOne (/projects/eshtry/node_modules/sequelize/lib/model.js:1228:12)
+    at async deleteFromCart (/projects/eshtry/src/controllers/cart.js:54:18)
+2023-04-01T00:55:45.685Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T00:55:45.721Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:02:52.871Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T01:02:53.000Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T01:02:53.006Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T01:02:54.054Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:02:54.077Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:02:55.154Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T01:02:55.160Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T01:02:56.243Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":7,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:02:56.248Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":5},"params":{},"query":{}} 
+2023-04-01T01:02:56.256Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":5,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:02:56.260Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T01:02:56.273Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:02:57.293Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T01:02:57.301Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T01:02:57.310Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:02:59.306Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T01:02:59.309Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T01:02:59.312Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T01:02:59.322Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T01:02:59.324Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T01:02:59.327Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T01:12:03.942Z error: txn is not defined - POST /order {"body":{"addressId":6,"cartItems":[{"id":11,"quantity":2}]},"params":{},"query":{}} ReferenceError: txn is not defined
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:36:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T01:12:03.953Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":11,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:12:03.959Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":6},"params":{},"query":{}} 
+2023-04-01T01:12:03.966Z error: txn is not defined - POST /order {"body":{"addressId":6,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} ReferenceError: txn is not defined
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:36:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T01:12:03.987Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T01:12:03.999Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:14:30.130Z error: txn is not defined - POST /order {"body":{"addressId":7,"cartItems":[{"id":13,"quantity":2}]},"params":{},"query":{}} ReferenceError: txn is not defined
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:36:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T01:14:30.145Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":13,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:14:30.153Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":7},"params":{},"query":{}} 
+2023-04-01T01:14:30.159Z error: txn is not defined - POST /order {"body":{"addressId":7,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} ReferenceError: txn is not defined
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:36:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T01:14:30.172Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T01:14:30.181Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:15:06.906Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":15,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:15:06.915Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":8},"params":{},"query":{}} 
+2023-04-01T01:15:06.923Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /order {"body":{"addressId":8,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:37:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T01:15:06.929Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T01:15:06.944Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:17:13.292Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":17,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:17:13.298Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":9},"params":{},"query":{}} 
+2023-04-01T01:17:13.308Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /order {"body":{"addressId":9,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:37:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T01:17:13.317Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T01:17:13.333Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:20:41.326Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":19,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:20:41.334Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":10},"params":{},"query":{}} 
+2023-04-01T01:20:41.345Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /order {"body":{"addressId":10,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:37:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T01:20:41.354Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T01:20:41.372Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:21:37.410Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":21,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:21:37.417Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":11},"params":{},"query":{}} 
+2023-04-01T01:21:37.427Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":11,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T01:21:37.435Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T01:21:37.453Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:28:44.661Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:28:44.693Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:28:44.740Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":12},"params":{},"query":{}} 
+2023-04-01T01:32:23.753Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:32:23.788Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:32:23.841Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":13},"params":{},"query":{}} 
+2023-04-01T01:33:21.775Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:33:21.811Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:33:21.852Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":14},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:39:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T01:35:16.478Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:35:16.514Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:35:16.555Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":15},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:42:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T01:36:34.509Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:36:34.550Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:36:34.598Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":16},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:42:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T01:38:10.765Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:38:10.818Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:38:10.868Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":17},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T01:38:25.994Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:38:26.042Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:38:26.091Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":18},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T01:44:49.952Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:44:50.031Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":19},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T01:44:58.716Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:44:58.754Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:44:58.797Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":20},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T01:46:28.995Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T01:46:29.034Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T01:46:29.080Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":21},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T14:38:37.070Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T14:38:37.133Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:38:37.193Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":1},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T14:39:12.291Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T14:39:12.430Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T14:39:12.439Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T14:39:14.149Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T14:39:14.198Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:39:14.255Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":3},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:91:28)
+2023-04-01T14:39:15.899Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T14:39:15.913Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T14:39:17.627Z error: next is not a function - POST /order {"body":{"addressId":4,"cartItems":[{"id":5,"quantity":2}]},"params":{},"query":{}} TypeError: next is not a function
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:44:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T14:39:17.634Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":5,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T14:39:17.642Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":4},"params":{},"query":{}} 
+2023-04-01T14:39:17.653Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /order {"body":{"addressId":4,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:14:24)
+2023-04-01T14:39:17.660Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T14:39:17.670Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:39:19.373Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T14:39:19.385Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T14:39:19.397Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:39:22.539Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T14:39:22.543Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T14:39:22.548Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T14:39:22.571Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T14:39:22.575Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T14:39:22.580Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T14:43:00.693Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T14:43:00.755Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:43:26.276Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T14:43:26.339Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:43:26.395Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":6},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:43:54.257Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T14:43:54.317Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:43:54.381Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":7},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:45:14.922Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T14:45:14.984Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T14:45:15.039Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":8},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:46:13.151Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T14:46:13.229Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":9},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:46:34.260Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":10},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:47:39.457Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":11},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:48:06.618Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":12},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:43:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:49:28.022Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":13},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:44:26)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:49:54.172Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":14},"params":{},"query":{}} 
+2023-04-01T14:50:19.091Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":15},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at /projects/eshtry/src/services/order.js:22:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async OrderService.createOrder (/projects/eshtry/src/services/order.js:18:26)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:53:52.785Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":16},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at /projects/eshtry/src/services/order.js:22:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async OrderService.createOrder (/projects/eshtry/src/services/order.js:18:26)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:55:04.528Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":17},"params":{},"query":{}} 
+2023-04-01T14:56:51.700Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":18},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:44:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T14:57:30.003Z error: cart is not defined - POST /cart/order {"body":{"addressId":1},"params":{},"query":{}} ReferenceError: cart is not defined
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:38:47)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T15:00:32.742Z error: Cannot read properties of undefined (reading 'map') - POST /cart/order {"body":{"addressId":2},"params":{},"query":{}} TypeError: Cannot read properties of undefined (reading 'map')
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:21:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T15:01:25.170Z error: Cannot read properties of undefined (reading 'map') - POST /cart/order {"body":{"addressId":3},"params":{},"query":{}} TypeError: Cannot read properties of undefined (reading 'map')
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:22:19)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:87:28)
+2023-04-01T15:02:27.516Z error: isCart is not defined - POST /cart/order {"body":{"addressId":4},"params":{},"query":{}} ReferenceError: isCart is not defined
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:39:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:03:11.100Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:03:11.174Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:03:11.240Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":6},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:03:36.335Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:03:36.396Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:03:36.463Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":7},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:04:29.181Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:04:29.243Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:05:07.619Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":9},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:05:51.890Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:05:51.945Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:05:52.008Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":1},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:05:59.925Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":2},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:06:30.603Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":3},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at /projects/eshtry/src/services/order.js:24:23
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async Promise.all (index 1)
+    at async OrderService.createOrder (/projects/eshtry/src/services/order.js:20:26)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:07:10.358Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":4},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:47:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:08:41.143Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":5},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:09:43.765Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:09:43.823Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:09:43.889Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":4},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:10:21.276Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":5},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:11:21.127Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:11:21.222Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":2},"params":{},"query":{}} 
+2023-04-01T15:11:29.368Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:11:29.468Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":1},"params":{},"query":{}} 
+2023-04-01T15:11:45.538Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:11:45.628Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":1},"params":{},"query":{}} 
+2023-04-01T15:11:57.914Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":2},"params":{},"query":{}} 
+2023-04-01T15:13:45.907Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:13:46.007Z error: Some cartItems ids are invalid - POST /cart/order {"body":{"addressId":1},"params":{},"query":{}} 
+2023-04-01T15:14:20.008Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:14:20.068Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:14:20.130Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":2},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:46:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:14:57.712Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:14:57.775Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:14:57.839Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":1},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:47:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:16:28.129Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:16:28.195Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:16:28.258Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":2},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:47:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:17:16.063Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:17:16.125Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:17:44.760Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:17:44.823Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:18:31.919Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:18:31.975Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:18:43.033Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:18:43.094Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:19:29.286Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:19:29.347Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:19:29.416Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":7},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:49:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:20:25.608Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:20:25.670Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:20:25.737Z error: Transaction cannot be rolled back because it has been finished with state: rollback - POST /cart/order {"body":{"addressId":8},"params":{},"query":{}} Error: Transaction cannot be rolled back because it has been finished with state: rollback
+    at Transaction.rollback (/projects/eshtry/node_modules/sequelize/lib/transaction.js:59:13)
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:49:27)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async orderCartItems (/projects/eshtry/src/controllers/cart.js:86:28)
+2023-04-01T15:21:40.010Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:21:40.071Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:21:56.963Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:21:57.092Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T15:21:57.101Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T15:21:58.504Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:21:58.541Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:21:59.916Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T15:21:59.927Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T15:22:01.356Z error: next is not a function - POST /order {"body":{"addressId":12,"cartItems":[{"id":21,"quantity":2}]},"params":{},"query":{}} TypeError: next is not a function
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:50:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:11:24)
+2023-04-01T15:22:01.363Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":21,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:22:01.368Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":12},"params":{},"query":{}} 
+2023-04-01T15:22:01.378Z error: next is not a function - POST /order {"body":{"addressId":12,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} TypeError: next is not a function
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:50:7)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async createOrder (/projects/eshtry/src/controllers/order.js:11:24)
+2023-04-01T15:22:01.385Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:22:01.396Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:22:02.655Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T15:22:02.668Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T15:22:02.681Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:22:05.257Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T15:22:05.261Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T15:22:05.264Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:22:05.279Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:22:05.282Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:22:05.287Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:22:43.495Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:22:43.617Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T15:22:43.626Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T15:22:45.126Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:22:45.169Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:22:46.551Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T15:22:46.562Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T15:22:48.010Z error: Cannot read properties of null (reading 'CartItems') - POST /order {"body":{"addressId":15,"cartItems":[{"id":27,"quantity":2}]},"params":{},"query":{}} TypeError: Cannot read properties of null (reading 'CartItems')
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:14:24)
+    at createOrder (/projects/eshtry/src/controllers/order.js:11:43)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at next (/projects/eshtry/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/projects/eshtry/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/projects/eshtry/node_modules/express/lib/router/index.js:175:3)
+    at router (/projects/eshtry/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/projects/eshtry/node_modules/express/lib/router/index.js:328:13)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at isAuthenticated (/projects/eshtry/src/middlewares/auth_middleware.js:18:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-04-01T15:22:48.017Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":27,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:22:48.024Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":15},"params":{},"query":{}} 
+2023-04-01T15:22:48.031Z error: Cannot read properties of null (reading 'CartItems') - POST /order {"body":{"addressId":15,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} TypeError: Cannot read properties of null (reading 'CartItems')
+    at OrderService.createOrder (/projects/eshtry/src/services/order.js:14:24)
+    at createOrder (/projects/eshtry/src/controllers/order.js:11:43)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at next (/projects/eshtry/node_modules/express/lib/router/route.js:144:13)
+    at Route.dispatch (/projects/eshtry/node_modules/express/lib/router/route.js:114:3)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:284:15
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at Function.handle (/projects/eshtry/node_modules/express/lib/router/index.js:175:3)
+    at router (/projects/eshtry/node_modules/express/lib/router/index.js:47:12)
+    at Layer.handle [as handle_request] (/projects/eshtry/node_modules/express/lib/router/layer.js:95:5)
+    at trim_prefix (/projects/eshtry/node_modules/express/lib/router/index.js:328:13)
+    at /projects/eshtry/node_modules/express/lib/router/index.js:286:9
+    at Function.process_params (/projects/eshtry/node_modules/express/lib/router/index.js:346:12)
+    at next (/projects/eshtry/node_modules/express/lib/router/index.js:280:10)
+    at isAuthenticated (/projects/eshtry/src/middlewares/auth_middleware.js:18:5)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+2023-04-01T15:22:48.038Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:22:48.049Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:22:49.344Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T15:22:49.356Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T15:22:49.370Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:22:52.076Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T15:22:52.083Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T15:22:52.090Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:22:52.112Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:22:52.115Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:22:52.120Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:23:51.281Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:23:51.423Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T15:23:51.430Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T15:23:52.882Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:23:52.922Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:23:54.355Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T15:23:54.366Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T15:23:55.792Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":18,"cartItems":[{"id":33,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:23:55.807Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":33,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:23:55.814Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":18},"params":{},"query":{}} 
+2023-04-01T15:23:55.823Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":18,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:23:55.832Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:23:55.843Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:23:57.176Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T15:23:57.189Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T15:23:57.203Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:23:59.790Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T15:23:59.793Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T15:23:59.799Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:23:59.821Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:23:59.825Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:23:59.830Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:24:34.608Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:24:34.718Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T15:24:34.725Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T15:24:35.990Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:24:36.024Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:24:37.193Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T15:24:37.202Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T15:24:38.402Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:24:38.410Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":3,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:24:38.416Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":3},"params":{},"query":{}} 
+2023-04-01T15:24:38.423Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":3,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:24:38.429Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:24:38.437Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:24:39.684Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T15:24:39.697Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T15:24:39.707Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:24:42.011Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T15:24:42.014Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T15:24:42.018Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:24:42.032Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:24:42.035Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:24:42.038Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:25:57.592Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:25:57.704Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T15:25:57.711Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T15:25:58.920Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:25:58.958Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:26:00.189Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T15:26:00.198Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T15:26:01.435Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":6,"cartItems":[{"id":9,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:26:01.448Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":9,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:26:01.453Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":6},"params":{},"query":{}} 
+2023-04-01T15:26:01.460Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":6,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:26:01.466Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:26:02.556Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T15:26:02.566Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T15:26:02.577Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:26:04.848Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T15:26:04.852Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T15:26:04.857Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:26:04.874Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:26:04.876Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:26:04.878Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:27:02.230Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":7,"cartItems":[{"id":13,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:27:02.248Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":13,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:27:02.253Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":7},"params":{},"query":{}} 
+2023-04-01T15:27:02.260Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":7,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:27:02.270Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:28:12.624Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":8,"cartItems":[{"id":15,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:28:12.642Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":15,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:28:12.650Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":8},"params":{},"query":{}} 
+2023-04-01T15:28:12.658Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":8,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:28:12.663Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:29:53.633Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":17,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:29:53.640Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":9},"params":{},"query":{}} 
+2023-04-01T15:29:53.649Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":9,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:29:53.661Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:30:12.735Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:30:12.845Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T15:30:12.852Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T15:30:14.056Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T15:30:14.091Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:30:15.253Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T15:30:15.262Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T15:30:16.467Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":21,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:30:16.472Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":12},"params":{},"query":{}} 
+2023-04-01T15:30:16.481Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":12,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T15:30:16.487Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T15:30:16.501Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:30:17.694Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T15:30:17.705Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T15:30:17.717Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T15:30:19.889Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T15:30:19.893Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T15:30:19.896Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:30:19.907Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:30:19.910Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:30:19.914Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:48:35.898Z error: undefined - undefined undefined {} 
+2023-04-01T15:58:25.186Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T15:58:25.196Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T15:58:25.212Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:58:25.223Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T15:58:25.226Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T15:58:25.231Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T16:01:08.648Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T16:01:08.657Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T16:01:08.674Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T16:01:08.686Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T16:01:08.689Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T16:01:08.694Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T16:01:13.748Z error: Incorrect username or password. - POST /signIn {"body":{"username":"testuser","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T16:01:13.824Z error: street and city are required. - POST /address {"body":{"street":"123 Main St"},"params":{},"query":{}} 
+2023-04-01T16:01:13.829Z error: street and city are required. - POST /address {"body":{"city":"New York"},"params":{},"query":{}} 
+2023-04-01T16:01:14.957Z error: Please provide all required fields - POST /cart {"body":{"price":10,"quantity":1},"params":{},"query":{}} 
+2023-04-01T16:01:14.988Z error: Item not found in cart - DELETE /cart/555 {"body":{},"params":{},"query":{}} 
+2023-04-01T16:01:16.051Z error: Name and description are required. - POST /categories {"body":{},"params":{},"query":{}} 
+2023-04-01T16:01:16.058Z error: Category already exists. - POST /categories {"body":{"name":"Clothing","description":"Clothing and fashion items"},"params":{},"query":{}} 
+2023-04-01T16:01:17.129Z error: Address and cartItems are both required. - POST /order {"body":{"cartItems":[{"id":7,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T16:01:17.134Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":5},"params":{},"query":{}} 
+2023-04-01T16:01:17.141Z error: Some cartItems ids are invalid - POST /order {"body":{"addressId":5,"cartItems":[{"id":10,"quantity":2}]},"params":{},"query":{}} 
+2023-04-01T16:01:17.148Z error: Address and cartItems are both required. - POST /order {"body":{"addressId":1,"cartItems":[]},"params":{},"query":{}} 
+2023-04-01T16:01:17.162Z error: Order not found - GET /order/999 {"body":{},"params":{},"query":{}} 
+2023-04-01T16:01:18.230Z error: Please provide all required fields. - POST /products {"body":{"description":"Test product description","price":20,"categoryId":1},"params":{},"query":{}} 
+2023-04-01T16:01:18.239Z error: Category not found. - POST /products {"body":{"name":"Test Product","description":"Test product description","price":20,"categoryId":100},"params":{},"query":{}} 
+2023-04-01T16:01:18.249Z error: Product not found. - GET /products/99999 {"body":{},"params":{},"query":{}} 
+2023-04-01T16:01:20.363Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"jahndoe","password":"PassworD@123","role":"admin","storeName":"Neeeeeeeeeey"},"params":{},"query":{}} 
+2023-04-01T16:01:20.366Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"trader"},"params":{},"query":{}} 
+2023-04-01T16:01:20.368Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"PassworD@123","role":"user"},"params":{},"query":{}} 
+2023-04-01T16:01:20.378Z error: This username is taken, please choose another one - POST /signUp {"body":{"firstName":"John","lastName":"Doe","username":"johndoe","password":"Passwor123","role":"user"},"params":{},"query":{}} 
+2023-04-01T16:01:20.380Z error: Please provide all required fields - POST /signUp {"body":{"firstName":"John","username":"johndoe","password":"PassworD@123"},"params":{},"query":{}} 
+2023-04-01T16:01:20.383Z error: Incorrect username or password. - POST /signIn {"body":{"username":"jondoe","password":"PassworD@123"},"params":{},"query":{}} 

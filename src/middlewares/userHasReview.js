@@ -1,4 +1,4 @@
-const User = require("../models/user");
+/* eslint-env node */
 const jwt = require("jsonwebtoken");
 const Review = require("../models/review");
 const userHasReview = async (req, res, next) => {
@@ -9,7 +9,6 @@ const userHasReview = async (req, res, next) => {
 
    const token = authorization.split(" ")[1];
    const { userId } = jwt.verify(token, process.env.JWT_ACCESS);
-   const user = await User.findByPk(userId);
    const productId = req.params.productId;
    const reviewId = req.params.reviewId;
 

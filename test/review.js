@@ -1,7 +1,9 @@
+  /* eslint-env node */
+
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const app = require("../app.js");
-const { sequelize, initDatabase } = require("../src/models/index.js");
+const {  initDatabase } = require("../src/models/index.js");
 const User = require("../src/models/user.js");
 const Review = require("../src/models/review.js");
 const { execSync } = require("child_process");

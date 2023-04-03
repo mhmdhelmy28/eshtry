@@ -1,5 +1,7 @@
+/* eslint-env node */
 const jwt = require("jsonwebtoken");
 const User = require("../models/user");
+const logger = require("../utils/logger");
 const isAuthenticated = async (req, res, next) => {
   const { authorization } = req.headers;
   if (!authorization) {
@@ -18,9 +20,9 @@ const isAuthenticated = async (req, res, next) => {
     next();
   } catch (error) {
     logger.error(error.message);
-    if (err instanceof jwt.TokenExpiredError) {
+    if (error instanceof jwt.TokenExpiredError) {
       return res.status(401, "access token expires");
-    } else if (err instanceof jwt.JsonWebTokenError) {
+    } else if (error instanceof jwt.JsonWebTokenError) {
       return res.status(401, "user not authorized");
     } else {
       res.status(500);
