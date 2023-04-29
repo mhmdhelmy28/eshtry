@@ -1,7 +1,7 @@
 const chai = require("chai");
 const chaiHttp = require("chai-http");
 const app = require("../app.js");
-const { sequelize, initDatabase } = require("../src/models/index.js");
+const {  initDatabase } = require("../src/models/index.js");
 const User = require("../src/models/user.js");
 const Category = require("../src/models/category.js");
 const Product = require("../src/models/product.js");
@@ -14,6 +14,7 @@ describe("Products API", () => {
   let category1;
   let userToken;
   let adminToken;
+  let traderToken;
   let productId;
   let traderId;
   const username = "JoeDoe";
@@ -22,13 +23,14 @@ describe("Products API", () => {
     await initDatabase();
     try {
       execSync("npx sequelize-cli db:seed:all", { stdio: "inherit" });
-      category = await Category.create({ name: "Test Category" });
+      await Category.create({ name: "Test Category" });
       category1 = await Category.create({ name: "cat 1", description: "cat desc" });
       const trader = await chai.request(app).post("/signUp").send({
         firstName: "Test",
         lastName: "Trader",
         username: username,
         password: password,
+        email: "j@d.com",
         role: "trader",
         storeName: "sa",
       });

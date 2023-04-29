@@ -37,6 +37,7 @@ describe("Order API", () => {
         lastName: "Trader",
         username: username,
         password: password,
+        email: "js@d.com",
         role: "trader",
         storeName: "sa",
       });
@@ -64,6 +65,7 @@ describe("Order API", () => {
         firstName: "Test",
         lastName: "User",
         username: "testuser",
+        email: "jw@d.com",
         password: "PassworD@123",
         role: "user",
       });

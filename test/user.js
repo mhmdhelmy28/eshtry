@@ -29,6 +29,7 @@ describe("User Registration and Login", () => {
         firstName: "John",
         lastName: "Doe",
         username: "johndoe",
+        email: "jsafw@d.com",
         password: "PassworD@123",
         role: "user",
       })
@@ -45,6 +46,7 @@ describe("User Registration and Login", () => {
         firstName: "John",
         lastName: "Doe",
         username: "jahndoe",
+        email: "jwas@d.com",
         password: "PassworD@123",
         role: "trader",
         storeName: "Neeeeeeeeeey",
@@ -63,6 +65,7 @@ describe("User Registration and Login", () => {
         lastName: "Doe",
         username: "jahndoe",
         password: "PassworD@123",
+        email: "j@d.com",
         role: "admin",
         storeName: "Neeeeeeeeeey",
       })
@@ -80,6 +83,7 @@ describe("User Registration and Login", () => {
         lastName: "Doe",
         username: "johndoe",
         password: "PassworD@123",
+        email: "jww@d.com",
         role: "trader",
       })
       .end((err, res) => {
@@ -95,6 +99,7 @@ describe("User Registration and Login", () => {
         firstName: "John",
         lastName: "Doe",
         username: "johndoe",
+        email: "j2d@d.com",
         password: "PassworD@123",
         role: "user",
       })
@@ -112,6 +117,7 @@ describe("User Registration and Login", () => {
         firstName: "John",
         lastName: "Doe",
         username: "johndoe",
+        email: "j2a@d.com",
         password: "Passwor123",
         role: "user",
       })
@@ -128,6 +134,7 @@ describe("User Registration and Login", () => {
       .send({
         firstName: "John",
         username: "johndoe",
+        email: "j12@d.com",
         password: "PassworD@123",
       })
       .end((err, res) => {

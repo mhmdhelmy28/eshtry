@@ -22,6 +22,7 @@ describe("Category API", () => {
         firstName: "Test",
         lastName: "User",
         username: "testuser",
+        email: "jsa@d.com",
         password: "PassworD@123",
         role: "user",
       });

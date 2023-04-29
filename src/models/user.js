@@ -17,6 +17,14 @@ class User extends Model {
                 username: {
                     type: DataTypes.STRING,
                 },
+                email: {
+                    type: DataTypes.STRING,
+                    unique: true
+                },
+                isVerified: {
+                    type: DataTypes.BOOLEAN,
+                    defaultValue: false
+                },
                 password: {
                     type: DataTypes.STRING,
                     validate: {

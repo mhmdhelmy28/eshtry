@@ -16,6 +16,8 @@ describe("Address API", () => {
   let token;
   let userId;
   let addressId;
+  let responseUser;
+  let userToken;
   before(async () => {
     await initDatabase();
 
@@ -29,6 +31,7 @@ describe("Address API", () => {
         firstName: firstName,
         lastName: lastName,
         username: username,
+        email: "jjj@d.com",
         password: password,
         role: "user",
       });

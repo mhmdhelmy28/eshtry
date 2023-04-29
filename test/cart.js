@@ -20,6 +20,7 @@ const expect = chai.expect;
 describe("Cart API", () => {
   let userToken;
   let responseUser;
+  let traderToken;
   let category;
   let product1;
   let product2;
@@ -35,6 +36,7 @@ describe("Cart API", () => {
         firstName: "Test",
         lastName: "Trader",
         username: "JoeDoe",
+        email: "jsaw@d.com",
         password: "PassworD@123",
         role: "trader",
         storeName: "sa",
@@ -60,6 +62,7 @@ describe("Cart API", () => {
         firstName: "Test",
         lastName: "User",
         username: "testuser",
+        email: "jawe@d.com",
         password: "PassworD@123",
         role: "user",
       });

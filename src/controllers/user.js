@@ -1,21 +1,26 @@
-const User = require("../models/user");
-const Trader = require("../models/trader");
-const Cart = require("../models/cart");
-const Role = require("../models/role");
-const { ValidationError } = require("sequelize");
-const ApiError = require("../utils/ApiError");
-const { sequelize } = require("../models/index");
+const User = require("../models/user")
+const Trader = require("../models/trader")
+const Cart = require("../models/cart")
+const Role = require("../models/role")
+const { ValidationError } = require("sequelize")
+const ApiError = require("../utils/ApiError")
+const { sequelize } = require("../models/index")
+const client = require('../utils/redisClient')()
+const logger = require("../utils/logger");
+const generateSecretCode = require('../utils/generate')
+const sendMail = require('../services/mail')
 const signUp = async (req, res, next) => {
   let t = undefined
 
   try {
-    const { firstName, lastName, username, password, role } = req.body
+    const { firstName, lastName, username, password, email, role } = req.body
 
     if (
       !firstName ||
       !lastName ||
       !username ||
       !password ||
+      !email ||
       !role ||
       (role !== "trader" && role !== "user")
     ) {
@@ -33,6 +38,7 @@ const signUp = async (req, res, next) => {
         firstName: firstName,
         lastName: lastName,
         username: username,
+        email: email,
         password: password,
       },
       { transaction: t }
@@ -50,6 +56,11 @@ const signUp = async (req, res, next) => {
 
       await Cart.create({ UserId: newUser.id }, { transaction: t })
 
+      
+      const secretCode = generateSecretCode()
+      await (await client).set(username, secretCode, 600)
+      
+      await sendMail(email, secretCode, username, (err) => logger.error(err))
       await t.commit()
       return res.status(201).send({ user: newUser })
     } else if (role === "trader") {
@@ -74,7 +85,6 @@ const signUp = async (req, res, next) => {
       )
 
       await t.commit()
-
       return res.status(201).send({
         newUser,
         trader,
@@ -92,8 +102,30 @@ const signUp = async (req, res, next) => {
 
     next(error)
   }
-};
+}
 
+const verifyEmail = async(req, res, next) => {
+  const {username, secretCode} = req.query;
+  const actualSecretCode = await (await client).get(username)
+  try{
+  if(actualSecretCode != null && secretCode !== actualSecretCode){
+    return res.status(400).send({message: "Invalid verification request"})
+  }
+  
+  await (await client).del(username)
+  const user = await User.findOne({ where: { username: username } })
+  if(user){
+    user.isVerified = true
+    user.save()
+    return res.status(200).send({message: "Email verified successfully"})
+  }
+  return res.status(400).send({message: "Invalid verification request"})
+  
+}  
+catch(error){
+  next(error)
+}
+}
 
 const signIn = async (req, res, next) => {
   try {
@@ -118,6 +150,6 @@ const signIn = async (req, res, next) => {
   } catch (error) {
     next(error)
   }
-};
+}
 
-module.exports = { signUp, signIn };
+module.exports = { signUp, signIn, verifyEmail }

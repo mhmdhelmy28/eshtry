@@ -37,6 +37,7 @@ describe("POST /products/:productId/reviews", () => {
                 firstName: "Test",
                 lastName: "User",
                 username: "testuser",
+                email: "j221@d.com",
                 password: "PassworD@123",
             });
 
@@ -44,6 +45,7 @@ describe("POST /products/:productId/reviews", () => {
                 firstName: "Test",
                 lastName: "User2",
                 username: "testuser2",
+                email: "j132@d.com",
                 password: "PassworD@123",
             });
             // Log in the user and get a JWT token
